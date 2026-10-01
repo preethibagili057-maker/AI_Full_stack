@@ -1,0 +1,12 @@
+from ollama import chat
+
+response=chat(
+    model="llama3.2",
+    messages=[
+        {
+            "role":"user",
+            "content":"write me a whatsapp message to my friend meghana asking her to meet me at the airport.keep the answer under 2 lines."
+        }
+    ]
+)
+print(response.message.content)
